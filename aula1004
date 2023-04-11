@@ -1,0 +1,30 @@
+1 - Crie um novo database.
+2 - Crie uma tabela Departamento com os atributos:
+    - Id
+    - Nome
+    - Ativo
+3 - Crie uma tabela com para controle de colaborador, onde seja possível controlar os atributos:
+    - Id
+    - Nome
+    - CPF
+    - Data_Nascimento
+    - Data_Admissao
+    - Departamento
+4 - Crie uma tabela para controlar os EPI, com os seguintes atributos:
+    - Id
+    - Descricao
+    - Data_Fabricacao
+    - Data_Vencimento
+5 - Crie uma tabela para controlar a entrega de EPI, com os seguintes atributos:
+     - Id
+     - Data_Entrega
+     - Id_colaborador
+     - Id_EPI
+6 - Insira:
+     - 6 departamentos
+     - 12 colaboradores
+     - 8 entreda de EPI
+7 - Selicione todos os usuário que são do departamento 3.
+8 - Selecione apenas os usuários que não receberam EPI.
+9 - Selecione o nome do colaborador, o departamento, a data de entreda e EPI e qual EPI foi entregue.
+10 - Selecione apenas os colaboradores que precebem EPI vencido. 
