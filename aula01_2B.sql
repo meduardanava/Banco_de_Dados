@@ -94,4 +94,16 @@ INSERT INTO SALARIOS (codigo, id_funcionario, valor_salario, data_alteracao)
 INSERT INTO SALARIOS (codigo, id_funcionario, valor_salario, data_alteracao)
 	 VALUES (7,1, 3600.00, '10/10/2020');
 
+SELECT f1.nome, 
+	s1.valor_salario
+FROM FUNCIONARIO f1
+INNER JOIN SALARIOS s1 ON s1.id_funcionario = f1.codigo;
+
+SELECT f1.nome,
+	s1.valor_salario,
+	d1.descricao
+FROM FUNCIONARIO f1
+INNER JOIN SALARIOS s1 ON s1.id_funcionario = f1.codigo
+INNER JOIN DEPARTAMENTO d1 ON d1.codigo = f1.codigo;
+
 
