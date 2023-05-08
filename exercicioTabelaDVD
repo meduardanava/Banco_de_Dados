@@ -88,3 +88,61 @@ Select count(*)
 	inner join film f1 on f1.film_id = i1.film_id
 	group by i1.store_id
 
+___________________________________________________________________________________
+
+-- Apresente a média de custo de reposição dos filmes.
+
+Select *
+	 from film
+	 
+Select AVG(replacement_cost)
+	from film
+
+___________________________________________________________________________________
+
+-- Apresente o filme com o maior custo de reposição dos filmes.
+
+Select *
+	 from film
+	
+Select film_id, title, description, replacement_cost
+	from film
+	where replacement_cost =
+	( 
+		Select MAX(replacement_cost)
+		from film
+	)
+
+___________________________________________________________________________________
+
+-- Apresente o filme com o menor custo de reposilão dos filmes.
+
+Select *
+	 from film
+	
+Select film_id, title, description, replacement_cost
+	from film
+	where replacement_cost =
+	( 
+		Select MIN(replacement_cost)
+		from film
+	)
+
+___________________________________________________________________________________
+
+-- Apresente uma consulta com o nome e sobrenome dos clientes que mais 
+-- locaram filmes e o valor total nas locações em ordem decrescente.
+
+Select *
+	from payment
+
+Select c1.customer_id, c1.first_name ||' '|| c1.last_name, sum(amount)
+	from payment p1
+	inner join customer c1 on c1.customer_id = p1.customer_id
+	group by c1.customer_id, c1.first_name ||' '|| c1.last_name
+	order by sum desc
+
+___________________________________________________________________________________
+
+-- Apresente uma consulta com o nome dos filmes mais locados e a 
+-- quantidade de locação ocorrida em ordem decrescente.
